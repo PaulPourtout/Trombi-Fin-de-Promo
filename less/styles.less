@@ -1,0 +1,229 @@
+// out: ../css/styles.css, sourcemap: true, compress: true
+@pink : #BB212D;
+@white : #fff;
+@grey : rgb(150, 150, 150);
+@dark-grey : rgb(42, 42, 42);
+@shadow: rgba(0, 0, 0, 0.3);
+body {
+  color: @dark-grey;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+header {
+  background-image: url(../img/cite_des_sciences.jpg);
+  background-size: cover;
+  padding: 100px;
+  width: 100%;
+  color: #fff;
+  box-sizing: border-box;
+  text-align: center;
+  figure {
+    background-image: url(../img/logo-capprio.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 200px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    margin: 0;
+  }
+  h1 {
+    font-size: 4rem;
+    margin-bottom: 50px;
+  }
+  a {
+    color: #fff;
+    background-color: @pink;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 20px;
+    text-transform: uppercase;
+    border: 3px solid @pink;
+    transition: 0.3s ease;
+    &:hover {
+      border: 3px solid @pink;
+      background-color: @white;
+      color: @pink;
+    }
+  }
+}
+
+
+#section01 {
+  padding: 50px 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  #top-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    figure {
+      background-image: url(../img/icon.png);
+      height: 30px;
+      width: 30px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin: 5px;
+    }
+  }
+
+  #trombi-container {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .pnj {
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      &:nth-child(1) {
+        .picture {
+          background-image: url(../img/maxence.jpg);
+        }
+      }
+      &:nth-child(2) {
+        .picture {
+          background-image: url(../img/boubacar.jpg);
+        }
+      }
+      &:nth-child(3) {
+        .picture {
+          background-image: url(../img/camille.jpg);
+        }
+      }
+      &:nth-child(4) {
+        .picture {
+          background-image: url(../img/yann.jpg);
+        }
+      }
+      &:nth-child(5) {
+        .picture {
+          background-image: url(../img/bakary.jpg);
+        }
+      }
+      &:nth-child(6) {
+        .picture {
+          background-image: url(../img/etienne.jpg);
+        }
+      }
+
+      .picture {
+
+        background-size: contain;
+        border-radius: 500px;
+        height: 120px;
+        width: 120px;
+        position: relative;
+        top: 73px;
+        box-shadow: 0 2px 5px @shadow;
+      }
+      .pnj-content {
+        border: 1px solid @grey;
+        padding: 60px 50px 30px 50px;
+
+        .icons {
+          display: flex;
+          justify-content: center;
+          div {
+            height: 10px;
+            width: 10px;
+            margin: 5px;
+            background-color: @dark-grey;
+            padding: 10px;
+            border-radius: 100%;
+            transition: 0.3s ease;
+
+            &:hover {
+              background-color: lighten(@dark-grey, 10%);
+            }
+            a {
+
+              text-decoration: none;
+              color: @white;
+              text-align: center;
+
+              i {
+                position: relative;
+                bottom: 4.5px;
+                right: 4px;
+                font-size: 1.3rem;
+              }
+
+              .fa-facebook {
+                position: relative;
+                right: 1px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  padding: 50px 0;
+  background-color: #3C2A3A;
+  color: @white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 30px solid #33212F;
+
+  figure {
+    background-image: url(../img/simplon.png);
+    height: 59px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  p {
+    width: 70%;
+    text-align: center;
+  }
+}
+
+
+@media screen and (max-width: 640px) {
+
+  header {
+    padding: 150px 20px;
+
+    figure {
+      height: 20px;
+      width: 150px;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    a {
+      font-size: 1rem;
+    }
+  }
+
+  #section01 {
+    #trombi-container {
+      justify-content: center;
+      .pnj {
+        width: 100%;
+        .pnj-content {
+          border: 1px solid @grey;
+
+        }
+      }
+    }
+  }
+}

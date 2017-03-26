@@ -5,4 +5,5 @@ I had the time to add some jQuery to make the rows appear when scrolling down th
 
 ### Technologies
 * HTML/CSS
+* Less
 * jQuery
